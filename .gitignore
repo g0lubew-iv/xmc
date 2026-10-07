@@ -1,0 +1,81 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual environments ---
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# --- C / build artifacts ---
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.dylib
+*.pyd
+*.out
+build/
+*.gcda
+*.gcno
+*.gcov
+
+# --- Editable installs ---
+*.egg-link
+pip-wheel-metadata/
+share/python-wheels/
+
+# --- Test / coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# --- Type checkers / linters ---
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+
+# --- IDE / editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Benchmarks output ---
+benchmarks/data/*.csv
+!benchmarks/data/.gitkeep

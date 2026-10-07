@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmc"
+version = "0.1.0"
+description = "xoshiro256 RNG + Monte-Carlo (C-extension)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Ivan Golubev" }]
+classifiers = [
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "numpy"]
+
+[tool.setuptools]
+package-dir = { "" = "python" }
+packages = ["xmc"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
