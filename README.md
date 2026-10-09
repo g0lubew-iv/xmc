@@ -44,7 +44,6 @@ import xmc # version 0.2.0
 # Интеграл sin(x) на [0, pi] = 2.0
 r = xmc.integrate(math.sin, 0, math.pi, n=1_000_000)
 print(r.estimate, r.stderr, r.n, r.method)
-# ~ 2.0 +/- 0.001
 ```
 
 ## 1. PRNG (xoshiro256**)
