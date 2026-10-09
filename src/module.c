@@ -1,6 +1,7 @@
 #include <Python.h>
 
 #include "mc/mc.h"
+#include "mc/mc_result.h"
 #include "rng/rng.h"
 
 static struct PyModuleDef xmc_module = {
@@ -19,16 +20,19 @@ PyInit__xmc(void) {
     }
 
     if (XmcRNG_Register(m) < 0) {
-        Py_DECREF(m);
-        return NULL;
+        Py_DECREF(m); return NULL;
     }
-
     if (XmcMC_Register(m)  < 0) {
-        Py_DECREF(m);
-        return NULL;
+        Py_DECREF(m); return NULL;
+    }
+    if (XmcMCResult_Register(m) < 0) {
+        Py_DECREF(m); return NULL;
+    }
+    if (XmcMC_Integrate_Register(m) < 0) {
+        Py_DECREF(m); return NULL;
     }
 
-    if (PyModule_AddStringConstant(m, "__version__", "0.1.0") < 0) {
+    if (PyModule_AddStringConstant(m, "__version__", "0.2.0") < 0) {
         Py_DECREF(m);
         return NULL;
     }

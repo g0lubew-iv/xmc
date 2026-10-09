@@ -1,5 +1,19 @@
-"""xmc: xoshiro256 RNG + Monte-Carlo."""
+"""xmc; xoshiro256 RNG + Monte Carlo, implemented in C."""
 
-from ._xmc import RNG, estimate_pi, __version__
+from ._xmc import (
+    RNG,
+    MCResult,
+    estimate_pi,
+    integrate,
+    integrate_antithetic,
+    __version__,
+)
 
-__all__ = ["RNG", "estimate_pi", "__version__"]
+__all__ = [
+    "RNG",
+    "MCResult",
+    "estimate_pi",
+    "integrate",
+    "integrate_antithetic",
+    "__version__",
+]
